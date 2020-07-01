@@ -433,6 +433,12 @@ variable "pod_security_policy_config" {
   }]
 }
 
+variable "enable_pod_security_policy" {
+  type        = bool
+  description = "enabled - Enable the PodSecurityPolicy controller for this cluster. If enabled, pods must be valid under a PodSecurityPolicy to be created."
+  default     = false
+}
+
 variable "node_metadata" {
   description = "Specifies how node metadata is exposed to the workload running on the node"
   default     = "GKE_METADATA_SERVER"
